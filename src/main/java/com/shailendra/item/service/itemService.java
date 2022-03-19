@@ -19,8 +19,8 @@ public class itemService {
         this.itemrepository = itemrepository;
     }
 
-    public Optional<item> getItem(int itemid){
-        return itemrepository.findById(itemid);
+    public item getItem(int itemid){
+        return itemrepository.findById(itemid).orElseThrow();
     }
 
     public List getAllItems(){

@@ -24,7 +24,7 @@ public class itemController {
     }
 
     @GetMapping("/{itemId}")
-    public Optional<item> getItems(@PathVariable int itemId){
+    public item getItems(@PathVariable int itemId){
         return itemService.getItem(itemId);
     }
 
